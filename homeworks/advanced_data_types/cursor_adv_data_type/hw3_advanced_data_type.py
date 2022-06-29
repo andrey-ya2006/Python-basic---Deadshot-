@@ -1,5 +1,3 @@
-from typing import List
-
 int_a = 55
 print(id(int_a))
 print('This is id of int_a ' + str(id(int_a)))
