@@ -28,3 +28,15 @@ print('Check str_b type ' + str(isinstance(str_b, str)))
 print('Check set_c type ' + str(isinstance(set_c, set)))
 print('Check lst_d type ' + str(isinstance(lst_d, list)))
 print('Check dict_e type ' + str(isinstance(dict_e, dict)))
+apples = 5
+peaches = 7
+print('Anna has {} apples and {} peaches.'.format(apples, peaches))
+print('Anna has {0} apples and {1} peaches.'.format(apples, peaches))
+print('Anna has {appl} apples and {peach} peaches.'.format(appl=apples, peach=peaches))
+print('Anna has {appl:5} apples and {peach:3} peaches.'.format(appl=apples, peach=peaches))
+print(f'Anna has {apples} apples and {peaches} peaches.')
+print('Anna has %d apples and %d peaches.' % (apples, peaches))
+dict_fruit = {'fruit1': 5, 'fruit2' : 7}
+print('Anna has {fruit1} apples and {fruit2} peaches.'.format(**dict_fruit))
+print(f'Anna has {dict_fruit:fruit1} apples and {dict_fruit:fruit2} peaches.')
+
