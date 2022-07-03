@@ -38,5 +38,46 @@ print(f'Anna has {apples} apples and {peaches} peaches.')
 print('Anna has %d apples and %d peaches.' % (apples, peaches))
 dict_fruit = {'fruit1': 5, 'fruit2' : 7}
 print('Anna has {fruit1} apples and {fruit2} peaches.'.format(**dict_fruit))
-print(f'Anna has {dict_fruit:fruit1} apples and {dict_fruit:fruit2} peaches.')
+print(f'Anna has {dict_fruit["fruit1"]} apples and {dict_fruit["fruit2"]} peaches.')
+lst = []
+for num in range(10):
+    if num % 2 == 1:
+        lst.append(num ** 2)
+    else:
+        lst.append(num ** 4)
+print(lst)
+lst_to_lst_comp = [ num ** 2 if num % 2 == 1 else num ** 4 for num in range(10)]
+print(lst_to_lst_comp)
+list_comprehension = [num // 2 if num % 2 == 0 else num * 10 for num in range(10)]
+print(list_comprehension)
+list_comprehension_to_regular = []
+for x in range(10):
+    if x % 2 == 0:
+        list_comprehension_to_regular.append(x // 2)
+    else:
+        list_comprehension_to_regular.append(x * 10)
+print(list_comprehension_to_regular)
+d = {}
+for num in range(1, 11):
+    if num % 2 == 1:
+        d[num] = num ** 2
+print(d)
 
+dict_compr = {x : x ** 2 for x in range(1, 11) if x % 2 == 1 }
+print(dict_compr)
+d = {}
+for num in range(1, 11):
+    if num % 2 == 1:
+        d[num] = num ** 2
+    else:
+        d[num] = num // 0.5
+print(d)
+dict_compr = {x : (x **2 if x % 2 == 1 else x // 0.5) for x in range(1, 11)}
+print(dict_compr)
+dict_comprehension = {x: x**3 for x in range(10) if x**3 % 4 == 0}
+print(dict_comprehension)
+dict_compr_regular = {}
+for x in range(10):
+    if x**3 % 4 == 0:
+        dict_compr_regular[x] = x ** 3
+print(dict_compr_regular)
