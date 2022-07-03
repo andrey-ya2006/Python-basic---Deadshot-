@@ -81,3 +81,12 @@ for x in range(10):
     if x**3 % 4 == 0:
         dict_compr_regular[x] = x ** 3
 print(dict_compr_regular)
+dict_comprehension = {x: x**3 if x**3 % 4 == 0 else x for x in range(10)}
+print(dict_comprehension)
+dict_compr_regular = {}
+for x in range(10):
+    if x ** 3 % 4 == 0:
+        dict_compr_regular[x] = x ** 3
+    else:
+        dict_compr_regular[x] = x
+print(dict_compr_regular)
