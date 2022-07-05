@@ -1,3 +1,6 @@
+from apt import print_function
+
+
 int_a = 55
 print(id(int_a))
 print('This is id of int_a ' + str(id(int_a)))
@@ -90,3 +93,33 @@ for x in range(10):
     else:
         dict_compr_regular[x] = x
 print(dict_compr_regular)
+def foo(x, y):
+    if x < y:
+        return x
+    else:
+        return y
+print(foo(5, 6))
+my_lam = lambda x, y: x if x < y  else y
+print(my_lam(5, 6))
+foo = lambda x, y, z: z if y < x and x > z else y
+print(foo(4, 7 , 12))
+def lambda_to_foo(x, y, z):
+    if y < x and x > z:
+        return z
+    else:
+        return y
+print(lambda_to_foo(4, 7, 12))
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+print(sorted(lst_to_sort))
+print(sorted(lst_to_sort, reverse=True))
+print(list(map(lambda x: x * 2, lst_to_sort)))
+list_A = [2, 3, 4]
+list_B = [5, 6, 7]
+new_lst = map(lambda x, y: x + y, list_A, list_B)
+print(list(new_lst))
+new_lst_to_sort = filter(lambda x: x % 2 == 1, lst_to_sort)
+print(list(new_lst_to_sort))
+lst_negatave_munbers = filter(lambda x: x < 0, range(-10, 10))
+print(list(lst_negatave_munbers))
+list_1 = [1,2,3,5,7,9]
+list_2 = [2,3,5,6,7,8]
