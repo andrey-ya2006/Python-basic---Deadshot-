@@ -9,6 +9,8 @@ lst_d = [1, 2, 3]
 print('This is id of lst_d ' + str(id(lst_d)))
 dict_e = {'a': 1, 'b': 2, 'c': 3}
 print('This is id of dict_e ' + str(id(dict_e)))
+
+#2. Append 4 and 5 to the lst_d and define the id one more time.
 lst_d_new_element = [4, 5]
 lst_d.append(lst_d_new_element)
 print(lst_d)
