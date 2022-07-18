@@ -184,13 +184,18 @@ print(list(lst_neg_number))
 list_1 = [1, 2, 3, 5, 7, 9]
 list_2 = [2, 3, 5, 6, 7, 8]
 
-def compare_list(lst1, lst2):
-	def compare_elemets(v):
-		if (v in lst1):
-			return True
-		else:
-			return False
-	filtered = filter(compare_elemets, lst2)
-	print(f'The filtered letters are:{list(filtered)}')
+# def compare_list(lst1, lst2):
+# 	def compare_elemets(v):
+# 		if (v in lst1):
+# 			return True
+# 		else:
+# 			return False
+# 	filtered = filter(compare_elemets, lst2)
+# 	print(f'The filtered letters are:{list(filtered)}')
+#
+#
+# compare_list(list_1, list_2)
 
-compare_list(list_1, list_2)
+compare_elemets = lambda ve: True if ve in list_1 else False
+filtered = filter(compare_elemets, list_2)
+print(f'The filtered letters are:{list(filtered)}')
